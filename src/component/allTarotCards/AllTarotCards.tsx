@@ -3,6 +3,7 @@ import supabase from "../../supabaseClient";
 import SingleTarotCard from "../singleTarotCard/SingleTarotCard";
 import { TarotDeckData } from "../../types/TarotDeckData";
 import { useTarotCardHook } from "../../hooks/useTarotCardHook";
+import { Box, Button } from "@mui/material";
 
 const fetchTarotDeckData = async () => {
   const { data, error } = await supabase
@@ -16,26 +17,16 @@ const fetchTarotDeckData = async () => {
 };
 
 const AllTarotCards = () => {
-  const { countLengthOfDeck } = useTarotCardHook();
-  const { data, isLoading, isError, error } = useQuery(
-    "tarotDeck",
-    fetchTarotDeckData
-  );
+  const { data } = useQuery<TarotDeckData[]>("tarotDeck", fetchTarotDeckData);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  const { modifiedData, displaySomeCards } = useTarotCardHook(data || []);
+  console.log("data", data);
+  console.log("data from hook", modifiedData);
 
-  if (isError) {
-    console.error("Error fetching data: ", error);
-    return <div>Error loading data</div>;
-  }
-
-  const dataLength = countLengthOfDeck(data);
-  console.log(dataLength);
   return (
-    <div>
-      {data?.map((item: TarotDeckData) => (
+    <Box>
+      <Box>Number of Tarot Cards: {modifiedData?.length}</Box>
+      {modifiedData?.map((item: TarotDeckData) => (
         <SingleTarotCard
           key={item.id}
           image={item.image_link}
@@ -44,8 +35,10 @@ const AllTarotCards = () => {
           sx={{ padding: 1 }}
         />
       ))}
-    </div>
+      <Button onClick={() => displaySomeCards(1)}> Display One Card</Button>
+      <Button onClick={() => displaySomeCards(5)}> Display Five Cards</Button>
+      <Button onClick={() => displaySomeCards(10)}> Display Ten Cards</Button>
+    </Box>
   );
 };
-
 export default AllTarotCards;
