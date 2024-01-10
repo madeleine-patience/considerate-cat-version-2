@@ -16,8 +16,15 @@
 
 To get started with Considerate Cat, follow these steps:
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/considerate-cat.git
-   cd considerate-cat
-   ```
+**Clone the Repository**
+
+```bash
+git clone https://github.com/yourusername/considerate-cat.git
+cd considerate-cat
+npm install
+npm run dev
+```
+
+## Technologies Used
+
+-**TypeScript: For type-safe code and maintainability.** -**React: For building the user interface.** -**Material-UI (MUI): For stylish and responsive UI components.** -**Storybook: For developing and testing UI components in isolation.** -**Supabase: For backend services like authentication and database.**
