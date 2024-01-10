@@ -2,9 +2,9 @@
 
 ## Overview
 
-**Considerate Cat** is a modern, intuitive app designed for Tarot enthusiasts. Leveraging the power of TypeScript and React, this application offers a seamless and interactive Tarot card reading experience. With a stylish interface crafted using Material-UI (MUI), users can enjoy a visually appealing and easy-to-navigate platform. Storybook is integrated to maintain a robust UI component library, ensuring consistency and efficiency in development. Powered by Supabase for backend services, Considerate Cat promises secure and scalable data handling.
+**Considerate Cat** is my passion project being built with artwork from The Considerate Cat Tarot : www.consideratecat.com. Its currently in early stages of development but will eventually be a working app for users of the deck to reference cards, get readings, explore stories of the cats and dive deeper into the artwork and story behind the deck. I'm using Typescrip, React, and MUI to build this project.
 
-## Features
+## (Future) Features
 
 - **Interactive Tarot Readings**: Engage with various Tarot spreads for insightful readings.
 - **Customizable Themes**: Personalize your experience with themes and layouts.
@@ -28,3 +28,7 @@ npm run dev
 ## Technologies Used
 
 -**TypeScript: For type-safe code and maintainability.** -**React: For building the user interface.** -**Material-UI (MUI): For stylish and responsive UI components.** -**Storybook: For developing and testing UI components in isolation.** -**Supabase: For backend services like authentication and database.**
+
+## Contributing
+
+Considerate Cat has a few contributers at the moment but will eventually be open source. Contact Madeleine if you'd like to help with building the project.

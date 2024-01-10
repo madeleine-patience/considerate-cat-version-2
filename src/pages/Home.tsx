@@ -23,7 +23,16 @@ const Home = () => {
 
   return (
     <Box p={10}>
-      <Typography variant="h5"> Considerate Cat Tarot</Typography>
+      <Typography variant="h1">Considerate Cat</Typography>
+      <Typography variant="h2">h2 font</Typography>
+      <Typography variant="h3"> h3 font</Typography>
+      <Typography variant="h4"> h4 font</Typography>
+      <Typography variant="h5"> h5 font</Typography>
+      <Typography variant="h6"> h6 font</Typography>
+      <Typography variant="body1"> Body 1</Typography>
+      <Typography variant="body2"> Body 2</Typography>
+      <Typography variant="caption"> caption </Typography>
+
       <Box display="flex" gap={2}>
         <GenericButton
           buttonLabel="Display One Card"

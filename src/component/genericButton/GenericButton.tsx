@@ -22,7 +22,8 @@ const GenericButton = ({ buttonLabel, onClick, width }: GenericButtonProps) => {
         cursor: "pointer",
         textAlign: "center",
         width: width ? `${width}px` : "fit-Content",
-
+        border: `2px solid ${palette.primary.dark}`,
+        boxShadow: `3px 3px 0px 3px ${palette.primary.dark}`,
         "&:hover": {
           backgroundColor: palette.primary.light,
         },
@@ -32,8 +33,9 @@ const GenericButton = ({ buttonLabel, onClick, width }: GenericButtonProps) => {
       }}
       onClick={onClick}
     >
-      <Typography variant="button"> {buttonLabel}</Typography>
+      <Typography variant="button">{buttonLabel}</Typography>
     </Box>
   );
 };
+
 export default GenericButton;
